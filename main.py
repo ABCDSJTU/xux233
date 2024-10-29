@@ -37,7 +37,6 @@ cpu_past_key_values = None
 step_counter = 0
 UPDATE_INTERVAL = 5  # 每隔5步将CPU上的past_key_values移回 GPU
 
-# 在推理过程中不计算梯度，节省内存
 with torch.no_grad():
     for _ in range(100):
         step_counter += 1
